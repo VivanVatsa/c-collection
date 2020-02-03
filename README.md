@@ -1,8 +1,10 @@
-# data.structures
-all about data structures i have learned till now, basics of the basics.
-everything that forms the very start of my coding life, its up here, right here!
-from arrays to lists to trees to graph, everything.
-its smooth actually, all y'all need to do, is let it slip in!
+# c-collection
+from bits to zetabyte, all in "C".
+the global language which everyone understands, knows & gets fascinated about
+the molecule of any code, the word in every programmer's mouth.
+all in this shelter. 
+dive into the sea of "C"
 
---
+---
 Vivan.
+
