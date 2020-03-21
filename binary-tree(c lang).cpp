@@ -134,7 +134,8 @@ struct node * createNode(struct node *current) {
 
 int menu() {
 	int choice;
-	
+
+	printf("This is a binary tree \n\n");
 	printf("Menu...\n\n");
 	printf("0. Exit\n");
 	printf("1. Add Number to the Tree\n");
