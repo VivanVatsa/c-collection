@@ -36,7 +36,7 @@ int main(){
 
 
 
-/*Prototype for utility functions 
+/* Block Swap Method
 void printArray(int arr[], int size);
 void swap(int arr[], int fi, int si, int d);
 
@@ -69,8 +69,6 @@ void leftRotate(int arr[], int d, int n)
 }
 */
 
-
-/*UTILITY FUNCTIONS*/
 /* function to print an array 
 void printArray(int arr[], int size)
 {
@@ -94,7 +92,6 @@ void swap(int arr[], int fi, int si, int d)
     }
 }
 
-// Driver Code
 int main()
 {
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
@@ -104,10 +101,8 @@ int main()
 }
 
 */
-// This code is contributed by rathbhupendra
 
-// C++ program for reversal algorithm
-// of array rotation
+//reversal algorithm
 /*Function to reverse arr[] from index start to end
 void rvereseArray(int arr[], int start, int end)
 {
@@ -138,7 +133,6 @@ void printArray(int arr[], int size)
         cout << arr[i] << " ";
 }
 
-/* Driver program to test above functions 
 int main()
 {
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
@@ -157,7 +151,7 @@ int main()
 }
 */
 
-// array rotation with help of juggling algorithm
+// array rotation with juggling algorithm
 /* 
 int gcd(int a, int b) {
 
@@ -209,8 +203,6 @@ int main(){
     leftrotate(ar, 2, n);
     printArray(ar, n);
 }
-
-
 */
 
 /*
