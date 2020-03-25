@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <iostream>
 using namespace std;
 
 // to find pair in sorted array whose is equal to the given sum 
