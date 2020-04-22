@@ -24,7 +24,7 @@ greater than the half of the size of the array size.
 
     Algorithm:
         Create a variable to store the max count, count = 0
-        Traverse through the array from start to end.
+        Traverse through the array from start to en'd.
         For every element in the array run another loop to find the count of similar elements in the given array.
         If the count is greater than the max count update the max count and store the index in another varaible.
         If the maximum count is greater than the half the size of the array, print the element. Else print there is no majority element.
