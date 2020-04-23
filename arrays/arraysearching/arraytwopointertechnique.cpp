@@ -29,4 +29,7 @@ Now let’s see how the two-pointer technique works. We take two pointers, one r
 #include <bits/stdc++.h>
 using namespace std;
 
-bool twoPointer(ar[], n, )
+bool twoPointer(ar[], n, x){
+	int a =0;
+	
+}
