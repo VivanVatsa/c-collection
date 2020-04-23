@@ -29,7 +29,27 @@ Now let’s see how the two-pointer technique works. We take two pointers, one r
 #include <bits/stdc++.h>
 using namespace std;
 
-bool twoPointer(ar[], n, x){
-	int a =0;
-	
+bool twoPointer(int ar[],int n,int x){
+	int i = 0; // pointer 1 represent 1st element
+	int j = n - 1; //pointer 2 represent last element
+
+	while(i < j){
+		if((ar[i]+ar[j]) == x)
+			return true;
+		if((ar[i]+ar[j]) < x)
+			i++;
+		else
+			j--;
+	}
+	return false;
+}
+
+int main(){
+	int ar[] = {10, 20, 35, 50, 75, 90};
+	int n = sizeof(ar) / sizeof(ar[0]);
+	int x = 70;
+
+	twoPointer(ar, n, x);
+
+	return 0;
 }
