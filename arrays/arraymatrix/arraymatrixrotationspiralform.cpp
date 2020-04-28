@@ -94,6 +94,18 @@ int main()
 Recursive approach: -
 The above problem can be solved by printing the boundary of the Matrix recursively. In each recursive call, we decrease the dimensions of the matrix.
 
+Algorithm:
+
+    create a recursive function that takes a matrix and some variables (k – starting row index, m – ending row index, l – starting column index, n – ending column index) as parameters
+    Check the base cases (stating index is less than or equal to ending index) and print the boundary elements in clockwise manner
+    Print the top row, i.e. Print the elements of kth row from column index l to n, and increase the count of k.
+    Print the right column, i.e. Print the last column or n-1th column from row index k to m and decrease the count of n.
+    Print the bottom row, i.e. if k > m, then print the elements of m-1th row from column n-1 to l and decrease the count of m
+    Print the left column, i.e. if l < n, then print the elements of lth column from m-1th row to k and increase the count of l.
+    Call the function recursively with the values of starting and ending indices of rows and columns.
+
+
+
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -111,7 +123,5 @@ void print(int ar[R][C], int i, int j, int m, int n){
         return;
     for(int p=i; p<n; p++)
         cout << ar[i][p] << " ";
-    
-
 
 }
