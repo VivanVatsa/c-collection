@@ -20,7 +20,9 @@ k - starting row index
 m - ending row index 
 l - starting column index 
 n - ending column index 
+
 implementation of simple matrix: -
+using the normal form
 
 #include <bits/stdc++.h> 
 using namespace std; 
@@ -104,7 +106,7 @@ Algorithm:
     Print the left column, i.e. if l < n, then print the elements of lth column from m-1th row to k and increase the count of l.
     Call the function recursively with the values of starting and ending indices of rows and columns.
 
-
+    **this spiral form is important as it has been asked in the coding question of google and amazon
 
 */
 #include <bits/stdc++.h>
