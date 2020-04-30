@@ -121,7 +121,32 @@ void print(int ar[R][C], int i, int j, int m, int n){
     //first case : if i & j doesnt lie in the matrix
     if(i>=m || j>=n)
         return;
+        //printing first row 
     for(int p=i; p<n; p++)
         cout << ar[i][p] << " ";
+        //print last column
+    for(int p = i+1; p<n; p++)
+        cout << ar[p][n - 1] << " ";
+        //printing last row if last and first row are not same
+        if((m-1) !=i)
+            for (int p = n - 2; p >= j;p--)
+            cout<<ar[m-1][p]<<" ";
+        //printing first column if last and first column arent same
+        if((n-1) !=j)
+            for (int p = m - 2; p > i; p--)
+                cout << ar[p][j] << " ";
 
+            print(ar, i+1, j+1, m-1, n-1);
+
+}
+
+int main(){
+    
+    int a[R][C] = { { 1, 2, 3, 4 }, 
+                    { 5, 6, 7, 8 }, 
+                    { 9, 10, 11, 12 }, 
+                    { 13, 14, 15, 16 } }; 
+  
+    print(a, 0, 0, R, C); 
+    return 0; 
 }
