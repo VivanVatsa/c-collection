@@ -109,6 +109,8 @@ Algorithm:
     **this spiral form is important as it has been asked in the coding question of google and amazon
 
 */
+
+// this program is falling under the divide and conquer algorithm(diving the problem into sub equal parts and then solving it one by one)
 #include <bits/stdc++.h>
 using namespace std;
 
