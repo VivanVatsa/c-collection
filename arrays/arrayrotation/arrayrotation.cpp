@@ -30,7 +30,7 @@ int main(){
     int ar[] = {1, 2, 3, 4, 5};
     int n = sizeof(ar) / sizeof(ar[0]);
 
-    n_of_rot(ar, , n);
+    n_of_rot(ar, 4, n);
     disp(ar, n);
 
     return 0;
