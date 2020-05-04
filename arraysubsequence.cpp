@@ -1,0 +1,39 @@
+/* A subsequence is a sequence that can be derived from another sequence by zero or more elements, without changing the order of the remaining elements.
+For the same example, there are 15 sub-sequences. They are (1), (2), (3), (4), (1,2), (1,3),(1,4), (2,3), (2,4), (3,4), (1,2,3), (1,2,4), (1,3,4), (2,3,4), (1,2,3,4). More generally, we can say that for a sequence of size n, we can have (2n-1) non-empty sub-sequences in total.
+
+A string example to differentiate: Consider strings “geeksforgeeks” and “gks”. “gks” is a subsequence of “geeksforgeeks” but not a substring. “geeks” is both a subsequence and subarray. Every subarray is a subsequence. More specifically, Subsequence is a generalization of substring.
+/*
+
+/* C++ code to generate all possible subsequences. 
+	Time Complexity O(n * 2^n) */
+#include <bits/stdc++.h>
+using namespace std;
+
+void printSubsequences(int arr[], int n)
+{
+    /* Number of subsequences is (2**n -1)*/
+    unsigned int opsize = pow(2, n);
+
+    /* Run from counter 000..1 to 111..1*/
+    for (int counter = 1; counter < opsize; counter++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            /* Check if jth bit in the counter is set 
+				If set then print jth element from arr[] */
+            if (counter & (1 << j))
+                cout << arr[j] << " ";
+        }
+        cout << endl;
+    }
+}
+
+// Driver program
+int main()
+{
+    int arr[] = {1, 2, 3, 4};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    cout << "All Non-empty Subsequences\n";
+    printSubsequences(arr, n);
+    return 0;
+}
