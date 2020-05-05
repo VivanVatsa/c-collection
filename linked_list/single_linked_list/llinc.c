@@ -6,6 +6,13 @@ struct node
     struct node *next;
 };
 
+void printList(struct node* n){
+    while(n !=NULL) {
+        printf("%d", n->data);
+        n = n->next;
+
+    }
+}
 int main(){
     // initialising the structure as NULL as it is empty
     struct node *head = NULL;
@@ -28,5 +35,6 @@ int main(){
     second->next = third;
     third->data = 3;
     third->next = NULL;
-    
+
+
 }
