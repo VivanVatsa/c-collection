@@ -3,16 +3,16 @@ using namespace std;
 
 // rotation one by one
 
-void leftRotatebyOne(int ar[], int n){
-    int temp = ar[0], i;
-    for(i=0; i<n-1; i++){
-        ar[i] = ar[i + 1];
+    void leftRotatebyOne(int ar[], int n){
+        int temp = ar[0], i;
+        for(i=0; i<n-1; i++){
+            ar[i] = ar[i + 1];
+
+        }
+        ar[i] = temp;
 
     }
-    ar[i] = temp;
-
-}
- 
+    
 void n_of_rot(int ar[], int d, int n) {
     for (int i = 0; i < d;i++)
         leftRotatebyOne(ar, n);
