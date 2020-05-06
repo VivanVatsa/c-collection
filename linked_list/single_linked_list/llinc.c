@@ -14,6 +14,7 @@ void printList(struct node* n){
     }
 }
 int main(){
+
     // initialising the structure as NULL as it is empty
     struct node *head = NULL;
     struct node *second = NULL;
@@ -35,6 +36,4 @@ int main(){
     second->next = third;
     third->data = 3;
     third->next = NULL;
-
-
 }
