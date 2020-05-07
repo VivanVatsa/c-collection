@@ -1,7 +1,7 @@
 // #include <bits/stdc++.h>
 #include <stdio.h>
 #include <stdlib.h>
-using namespace std;
+// using namespace std;
 
 struct node{
     int data;
@@ -50,12 +50,12 @@ void deleteNode(struct node **head_ref, int key){
 
 // This function prints contents of linked list starting from
 // the given node
-void printList(struct Node *node)
+void printList(struct node *node)
 {
     while (node != NULL)
     {
         // cin >> node->data;
-        printf("%d", node->data);
+        printf("%d  ", node->data);
 
         node = node->next;
     }
@@ -71,9 +71,11 @@ int main() {
     pushValue(&head, 2);
 
     puts("Created linked list");
+    // puts(" ");
     printList(head);
     deleteNode(&head, 3);
     puts("\n linked list after deletion are ");
+    // puts(" ");
     printList(head);
 
     return 0;
