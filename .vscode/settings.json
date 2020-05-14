@@ -2,5 +2,6 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
         "algorithm": "cpp"
-    }
+    },
+    "competitive-programming-helper.firstTime": false
 }
