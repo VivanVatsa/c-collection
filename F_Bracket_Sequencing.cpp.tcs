@@ -1,0 +1,1 @@
+[{"input":"2\n)\n(()\n","output":"Yes\n"},{"input":"2\n)(\n()\n","output":"No\n"},{"input":"4\n((()))\n((((((\n))))))\n()()()\n","output":"Yes\n"},{"input":"3\n(((\n)\n)\n","output":"No\n"}]
