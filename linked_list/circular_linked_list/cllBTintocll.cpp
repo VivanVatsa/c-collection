@@ -17,7 +17,6 @@ algorithms: -
 #include <iostream>
 using namespace std;
 
-// To represents a node of a Binary Tree
 struct Node
 {
     struct Node *left, *right;
