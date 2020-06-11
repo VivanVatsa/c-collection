@@ -22,8 +22,7 @@ void push(struct node **head_ref, int data){
 
     else
         ptr1->next = ptr1;
-        //for the first node
-
+    //for the first node
     *head_ref = ptr1;
 }
 
@@ -36,11 +35,57 @@ void printList(struct node *head){
         } while (temp != head);
 
     }
-
     printf("\n");
 }
-    int del_node(struct node **head_ref, int data)
-{
+
+void del_list(struct node *head, int key){
+    if(head == NULL)
+        return;
+    
+    // find the required node
+    struct node *current = head;
+    struct node *previous;
+
+    while (current->data != key){
+        if(current->next==head){
+            printf("\ngiven node is not found in the list");
+            break;
+        }
+
+        previous = current;
+        current = current->data;
+
+    }
+
+    //check if node is the only node
+    if(current->next==head){
+        head = NULL;
+        free(current);
+        return;
+    }
+
+    // if more than one node, check if the first node
+    if(current==head){
+        previous = head;
+        while (previous->next!=head)
+        {
+            previous = previous->next;
+            head = current->next;
+            previous->next = head;
+            free(current);
+        }
+    }
+        // check if node is last node
+    else if(current->next == head){
+            previous->next = head;
+            free(current);
+    }
+    
+    else
+        {
+            previous->next = current->next;
+            free(current);
+        }
 }
 
 int main(void){
@@ -58,7 +103,7 @@ int main(void){
     printf("List Before Deletion: ");
     printList(head);
 
-    del_node(head, 7);
+    del_list(head, 7);
 
     printf("List After Deletion: ");
     printList(head);
