@@ -7,7 +7,8 @@ struct node{
 };
 
 
-// insertion at the start of the node
+/* insertion at the start of the node */
+
 void push(struct node **head_ref,int newData){
     //allocate the new node
     struct node *new_node = (struct node*)malloc(sizeof(struct node));
@@ -27,6 +28,23 @@ void push(struct node **head_ref,int newData){
         (*head_ref) = new_node;
 }
 
+/* insert a node after the given node */
+
+void insert_after(struct node *previous_node, int new_data){
+
+    //first check whether the node is not empty.
+    if(previous_node == NULL){
+        printf("the given previous node cannot be NULL")
+        return ;
+    }
+
+    //allocate new node
+    struct node *new_node = (struct node *)malloc(sizeof(struct node));
+
+    new_node->data == new_data;
+
+    
+}
 
 int main(void){
 
