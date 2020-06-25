@@ -16,6 +16,6 @@ int main(){
     int n = sizeof(ar) / sizeof(ar[0]);
     vector<int> vect(ar, ar + n);
 
-     cout << "vivan";
+    cout << "Vector is: ";
 }
 
