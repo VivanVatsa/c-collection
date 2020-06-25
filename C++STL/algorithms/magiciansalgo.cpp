@@ -17,7 +17,5 @@ int main(){
     vector<int> vect(ar, ar + n);
 
      cout << "vivan";
-
-     cin >> ;
 }
 
