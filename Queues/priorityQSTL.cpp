@@ -17,10 +17,10 @@ using namespace std;
 void showpq(priority_queue<int> gq){
     priority_queue<int> g = gq;
     while(!g.empty()){
-        cout << "\t" << g.top();
+        cout << g.top() << "\t";
         g.pop();
     }
-    cout << "\n";
+    // cout << "\n";
 }
 
 int main(void){
@@ -35,9 +35,9 @@ int main(void){
 
     cout << "your priority Queue is: ";
     showpq(PQ);
-    cout << "\n PQ.size() is: " << PQ.size();
-    cout << "\nPQ.top() element is: " << PQ.top();
-    cout << "\n pq.Pop()";
+    cout << "\nPQ.size() " << PQ.size();
+    cout << "\nPQ.top()  " << PQ.top();
+    cout << "\npq.Pop()  ";
     PQ.pop();
     showpq(PQ);
 
