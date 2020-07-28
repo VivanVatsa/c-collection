@@ -10,21 +10,21 @@
 //node for storing the queue block
 struct Qnode
 {
-    int data;
+    int key;
     struct Qnode *next;
 };
 
 //this is to store the front and rear pointers
 struct Queue
 {
-    struct Queue *front, *rear;
+    struct Qnode *front, *rear;
 };
 
 // now first i gotta create that first queue block node
-struct Qnode *newNode(int value)
+struct Qnode *newNode(int k)
 {
     struct Qnode *temp = (struct Qnode *)malloc(sizeof(struct Qnode));
-    temp->data = value;
+    temp->key = k;
     temp->next = NULL;
 
     return temp;
@@ -42,15 +42,15 @@ struct Queue *createQueue()
 
 // now i will create enQueue and deQueue
 // here i am adding "value" to q
-void enQueue(struct Queue *q, int value)
+void enQueue(struct Queue *q, int k)
 {
-    struct Qnode *temp = newNode(value);
+    struct Qnode *temp = newNode(k);
     // now all the necessary condition check
     // as insertion happens at the end so we have to work with rear pointer
     // check if pointer is null or not
     if (q->rear == NULL)
     {
-        q->front = q->rear = *temp;
+        q->front = q->rear = temp;
         return;
     }
     // ahh this is the step which i call
@@ -60,7 +60,7 @@ void enQueue(struct Queue *q, int value)
     q->rear = temp;
 }
 
-int deQueue(struct Queue *q)
+void deQueue(struct Queue *q)
 {
     if (q->front == NULL)
         return;
@@ -88,8 +88,8 @@ int main(void)
     enQueue(q, 5);
     enQueue(q, 6);
 
-    printf("Queue front is at : %d \n", q->front);
-    printf("Queue rear is at : %d \n", q->rear);
+    printf("Queue front is at : %d \n", q->front->key);
+    printf("Queue rear is at : %d \n", q->rear->key);
 
     return 0;
 }
