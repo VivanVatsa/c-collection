@@ -5,6 +5,9 @@ Algorithm Inorder(tree)
    3. Traverse the right subtree, i.e., call Inorder(right-subtree)
 */
 
+// the tree example
+// https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
+
 /*
 Depth First Traversals:
 (a) Inorder (Left, Root, Right) : 4 2 5 1 3
@@ -13,3 +16,65 @@ Depth First Traversals:
 
 Breadth First or Level Order Traversal : 1 2 3 4 5
 */
+
+#include <bits/stdc++.h>
+#include <stdio.h>
+#include <stdlib.h>
+// #include <algorithm>
+// #include <conio.h>
+using namespace std;
+#define fast                    \
+   ios::sync_with_stdio(false); \
+   cin.tie(0);                  \
+   cout.tie(0);
+// #define ll long long int
+// first we need 3 set values data, left node, right node
+struct node
+{
+   int data;
+   struct node *left;
+   struct node *right;
+};
+
+// the allocation of new node
+struct node *newNode(int data)
+{
+   struct node *node = (struct node *)malloc(sizeof(struct node));
+   node->data = data;
+   node->left = NULL;
+   node->right = NULL;
+
+   return (node);
+}
+
+// function to display the inorder traversal
+void printInorder(struct node *node)
+{
+   if (node == NULL)
+      return;
+   printInorder(node->left);
+   cout << node->data;
+   printInorder(node->right);
+}
+int main()
+{
+   freopen("input.txt", "r", stdin);
+   freopen("output.txt", "w", stdout);
+   fast;
+   // int T; cin >> T;
+   // while (T--) {
+
+   // }
+   // cout << T + T;
+
+   struct node *root = newNode(1);
+   root->left = newNode(2);
+   root->right = newNode(3);
+   root->left->left = newNode(4);
+   root->left->right = newNode(5);
+
+   printf("\nInorder traversal of binary tree is \n");
+   printInorder(root);
+
+   return 0;
+}
