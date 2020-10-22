@@ -1,0 +1,9 @@
+C:/Users/Vivan/Documents/GitHub/c-collection/build/CMakeFiles/NightlyMemoryCheck.dir
+C:/Users/Vivan/Documents/GitHub/c-collection/build/CMakeFiles/Experimental.dir
+C:/Users/Vivan/Documents/GitHub/c-collection/build/CMakeFiles/cpp.dir
+C:/Users/Vivan/Documents/GitHub/c-collection/build/CMakeFiles/Continuous.dir
+C:/Users/Vivan/Documents/GitHub/c-collection/build/CMakeFiles/Nightly.dir
+C:/Users/Vivan/Documents/GitHub/c-collection/build/CMakeFiles/PACKAGE.dir
+C:/Users/Vivan/Documents/GitHub/c-collection/build/CMakeFiles/RUN_TESTS.dir
+C:/Users/Vivan/Documents/GitHub/c-collection/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Vivan/Documents/GitHub/c-collection/build/CMakeFiles/ZERO_CHECK.dir
