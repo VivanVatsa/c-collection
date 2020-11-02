@@ -5,6 +5,6 @@
 
 using namespace std;
 
-class BST
+class node
 {
 }
