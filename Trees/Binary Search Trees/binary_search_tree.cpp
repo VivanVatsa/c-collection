@@ -10,5 +10,9 @@ class node
     int data;
     node *left, *right;
 
-    node()
+    node(int item)
+    {
+        this.data = item;
+        this.left = this.right = NULL;
+    }
 }
