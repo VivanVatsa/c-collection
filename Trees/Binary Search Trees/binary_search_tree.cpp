@@ -18,6 +18,9 @@ class node
 
 }
 
-void insert(int data) {
-	new
+void
+inorder()
+{
 }
+
+void insert() {}
