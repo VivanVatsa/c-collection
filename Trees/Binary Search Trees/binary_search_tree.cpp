@@ -7,12 +7,17 @@ using namespace std;
 
 class node
 {
-    int data;
-    node *left, *right;
+	int data;
+	node *left, *right;
 
-    node(int item)
-    {
-        this.data = item;
-        this.left = this.right = NULL;
-    }
+	node(int item)
+	{
+		this.data = item;
+		this.left = this.right = NULL;
+	}
+
+}
+
+void insert(int data) {
+	new
 }
