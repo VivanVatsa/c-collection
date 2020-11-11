@@ -5,22 +5,67 @@
 
 using namespace std;
 
-class node
+class BST
 {
 	int data;
-	node *left, *right;
+	BST *left;
+	BST *right;
+public:
+	BST(); //default constructor
+	BST(int); //parameterized
+	BST* insert(BST*, int); // insert function
+	void inorder(BST*);
+};
 
-	node(int item)
-	{
-		this.data = item;
-		this.left = this.right = NULL;
+// will define all the constructors
+// default constructor
+BST::BST(): data(0), left(NULL), right(NULL) {}
+
+BST::BST(int value) {
+	data = value;
+	left = right = NULL;
+}
+
+BST* BST::insert(BST* root, int value) {
+	if (!root) { //if first node is NULL create new node
+		return new BST(value);
 	}
 
+	// if not then insert data
+	if (value > root->data) {
+		// if value is greater than root node data then it goes right
+
+		root->right = insert(root->right, value);
+	}
+
+	else {
+		root->left = insert(root->left, value);
+	}
+	return root;
 }
 
-void
-inorder()
-{
+void BST::inorder(BST* root) {
+	if (!root) {
+		return;
+	}
+	inorder(root->left);
+	cout << root->data << endl;
+	inorder(root->right);
 }
 
-void insert() {}
+
+int main(void) {
+	BST b, *root = NULL;
+	root = b.insert(root, 45);
+
+	b.insert(root, 30);
+	b.insert(root, 20);
+	b.insert(root, 40);
+	b.insert(root, 70);
+	b.insert(root, 60);
+	b.insert(root, 80);
+
+	b.inorder(root);
+
+	return 0;
+}
