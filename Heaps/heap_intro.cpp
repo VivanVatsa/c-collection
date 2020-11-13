@@ -13,10 +13,12 @@ struct node {
 struct node *newNode(int key) {
 
 	struct node *temp = (struct node*)malloc(sizeof(struct node));
+	temp->data = key;
+	temp->left = temp->right = NULL;
 
+	return temp;
 }
 
-int main(void)
-{
-	int x;
+void insert(struct node *head, int data) {
+
 }
