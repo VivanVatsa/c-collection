@@ -18,3 +18,13 @@ struct node *newNode(int key) {
 
 	return temp;
 }
+
+
+void insert() {
+
+}
+
+int minValueNode() {
+
+
+}
