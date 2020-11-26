@@ -14,7 +14,6 @@ public:
 	// default constructor
 	MinHeap(int capacity);
 
-	//
 	void MinHeapify(int );
 
 	int parent(int i) {return (i - 1) / 2; }
