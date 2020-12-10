@@ -12,6 +12,4 @@ class MinHeap {
 	int heap_size; // current number of elements in min heap
 public:
 	// default constructor
-	MinHeap(int capacity);
-
 }
